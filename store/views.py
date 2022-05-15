@@ -17,5 +17,6 @@ class BookViewSet(ModelViewSet):
     search_fields = ['name', 'author_name']
     ordering_fields = ['price', 'author_name']
 
+
 def auth(request):
     return render(request, 'oauth.html')

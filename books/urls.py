@@ -27,7 +27,7 @@ router.register(r'book', BookViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('', include('social_django.urls', namespace='social')),
-#     https://python-social-auth.readthedocs.io/en/latest/configuration/django.html
+    #     https://python-social-auth.readthedocs.io/en/latest/configuration/django.html
     path('auth/', auth)
 
 ]
