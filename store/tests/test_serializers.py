@@ -1,5 +1,4 @@
-from unittest import TestCase
-
+from django.test import TestCase
 from store.models import Book
 from store.serializers import BooksSerializer
 
@@ -16,14 +15,15 @@ class BookSerializerTestCase(TestCase):
                 'id': book_1.id,
                 'name': 'Test book 1',
                 'price': '25.00',
-                'author_name': 'Author 1'
+                'author_name': 'Author 1',
+                'likes_count': 0
             },
             {
                 'id': book_2.id,
                 'name': 'Test book 2',
                 'price': '55.00',
-                'author_name': 'Author 2'
+                'author_name': 'Author 2',
+                'likes_count': 0
             },
         ]
         self.assertEqual(expected_data, data)
-
