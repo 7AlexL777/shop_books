@@ -7,7 +7,7 @@ from store.models import Book, UserBookRelation
 class BooksSerializer(ModelSerializer):
     # I left likes_count for clarity; you can cut and leave only the annotation
     likes_count = serializers.SerializerMethodField()
-    annotated_likes = serializers.IntegerField()
+    annotated_likes = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Book
