@@ -29,7 +29,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('', include('social_django.urls', namespace='social')),
     #     https://python-social-auth.readthedocs.io/en/latest/configuration/django.html
-    path('auth/', auth)
+    path('auth/', auth),
+    path('__debug__/', include('debug_toolbar.urls')),
 
 ]
 
