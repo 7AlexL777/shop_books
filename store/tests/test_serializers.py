@@ -38,11 +38,11 @@ class BookSerializerTestCase(TestCase):
         data = BooksSerializer(books, many=True).data
         expected_data = [
             {
-                'id': book_1.id,
-                'name': 'Test book 1',
-                'price': '25.00',
-                'author_name': 'Author 1',
-                'annotated_likes': 3,
+                "id": book_1.id,
+                "name": 'Test book 1',
+                "price": '25.00',
+                "author_name": 'Author 1',
+                "annotated_likes": 3,
                 'rating': '4.67',
                 'owner_name': 'user1',
                 'readers': [
@@ -66,7 +66,7 @@ class BookSerializerTestCase(TestCase):
                 'price': '55.00',
                 'author_name': 'Author 2',
                 'annotated_likes': 2,
-                'rating': '3.5',
+                'rating': '3.50',
                 'owner_name': '',
                 'readers': [
                     {
@@ -84,4 +84,9 @@ class BookSerializerTestCase(TestCase):
                 ]
             },
         ]
+        # self.maxDiff = None
+        # print(data)
+        # print(expected_data)
+        # print(type(data))
+        # print(type(expected_data))
         self.assertEqual(expected_data, data)
